@@ -1,8 +1,7 @@
 package hansung.designpatterns.factory.pizzaaf;
 
 
-public class ChicagoPizzaIngredientFactory 
-	implements PizzaIngredientFactory 
+public class ChicagoPizzaIngredientFactory implements PizzaIngredientFactory
 {
 
 	public Dough createDough() {
@@ -30,5 +29,20 @@ public class ChicagoPizzaIngredientFactory
 
 	public Clams createClam() {
 		return new FrozenClams();
+	}
+
+	public Meat[] createMeat() {
+		Meat meat [] = { new Pork(),
+				     	  new Beef()
+		};
+		return meat;
+	}
+
+	public Meat createBulgogi() {
+		return new BulgogiMeat();
+	}
+
+	public Ricecake createRicecake() {
+		return new SlicedRicecake();
 	}
 }

@@ -27,4 +27,17 @@ public class NYPizzaIngredientFactory implements PizzaIngredientFactory {
 	public Clams createClam() {
 		return new FreshClams();
 	}
+
+	public Meat[] createMeat() {
+		Meat meats[] ={new Steak(), new Pork()};
+		return meats;
+	}
+
+	public Meat createBulgogi() {
+		return new BulgogiMeat();
+	}
+
+	public Ricecake createRicecake() {
+		return new SlicedRicecake();
+	}
 }

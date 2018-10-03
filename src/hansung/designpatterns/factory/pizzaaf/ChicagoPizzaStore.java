@@ -29,6 +29,10 @@ public class ChicagoPizzaStore extends PizzaStore {
 			pizza.setName("Chicago Style Pepperoni Pizza");
 
 		}
+		else if(item.equals("meat")){
+			pizza = new MeatPizza(ingredientFactory);
+			pizza.setName("Chicago Style Meat Pizza");
+		}
 		return pizza;
 	}
 }
